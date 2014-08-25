@@ -1,7 +1,13 @@
-## Put comments here that give an overall description of what your
-## functions do
+##The function makeCacheMatrix() creates an object of type list, which then can
+## be passed on to the function cacheSolve(), which first checks if inverse
+## is already stored in cache for the given object. If present, it returns that 
+## value, and if not- it calculates, stores in cache, and returns the newly
+## calculated value.
 
-## Write a short comment describing this function
+## The function makeCacheMatrix creates an object of type list with
+# variable 'inv' initialized to NULL. The short functions inside this
+# can be accessed from the next function cacheSolve.
+
 
 makeCacheMatrix <- function(x = matrix()) {
 	i<-Null
@@ -16,7 +22,11 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## The function cacheSolve checks if the inverse ("inv") has been stored
+# And if not, calculates it, stores and also returns it. If the inverse
+# of the object was already calculated and stored, it will fetch the result
+# and return it.
+
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
